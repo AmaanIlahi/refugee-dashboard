@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f7;
+  color: #111827;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Thin sidebar */
+.sidebar {
+  width: 70px;               /* thin */
+  background: #111827;
+  color: #e5e7eb;
+  padding: 16px 8px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sidebar-nav a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s;
+}
+
+.sidebar-nav a:hover {
+  background: #374151;
+  transform: translateY(-1px);
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  padding: 24px 32px 40px;
+}
+
+/* Question sections */
+.question-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 22px 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.question-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+/* 70 / 30 layout */
+.section-body {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+/* Visualization container (supports multiple charts stacked vertically) */
+.viz-panel {
+  flex: 0 0 70%;
+  max-width: 70%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;       /* spacing between multiple charts */
+}
+
+/* Analysis panel */
+.analysis-panel {
+  flex: 0 0 30%;
+  max-width: 30%;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 14px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.analysis-panel h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+/* Make embedded SVGs shrink nicely */
+.viz-panel svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scrolling for sidebar anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .section-body {
+    flex-direction: column;
+  }
+
+  .viz-panel,
+  .analysis-panel {
+    max-width: 100%;
+    flex-basis: 100%;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .analysis-panel {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+/* Intro Sections */
+.intro-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 40px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.intro-center {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.intro-main-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #4a2f21;
+}
+
+.intro-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #b3542e;
+  margin-bottom: 28px;
+}
+
+.intro-team h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.intro-team p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.intro-heading {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 650;
+}
+
+.intro-divider {
+  width: 80px;
+  height: 3px;
+  background: #b3542e;
+  margin-bottom: 20px;
+}
+
+.intro-question {
+  font-size: 17px;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #4a2f21;
+}
+
+.intro-section p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+}

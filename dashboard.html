@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forced Migration Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Q's</div>
+      <nav class="sidebar-nav">
+        <a href="#q1">Q1</a>
+        <a href="#q2">Q2</a>
+        <a href="#q3">Q3</a>
+        <a href="#q4">Q4</a>
+        <a href="#q5">Q5</a>
+        <a href="#q6">Q6</a>
+        <a href="#q7">Q7</a>
+        <a href="#q8">Q8</a>
+        <a href="#q9">Q9</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <section id="intro-title" class="intro-section intro-center">
+        <h1 class="intro-main-title">Navigating the Global Refugee Crisis:<br>Understanding the Human Flow</h1>
+
+        <h3 class="intro-subtitle">
+          Tracing Human Displacement: Analyzing Global Refugee Flows<br>
+          and Resettlement Patterns (2000–2023)
+        </h3>
+
+        <div class="intro-team">
+          <h4>Team Members</h4>
+          <p>Amaan Elahi – ae2950<br>
+             Aayush Anand – aa13015<br>
+             Md Aamir Achhava – ma8616
+          </p>
+        </div>
+      </section>
+
+      <section id="intro-problem" class="intro-section">
+        <h2 class="intro-heading">Problem & Context</h2>
+        <div class="intro-divider"></div>
+
+        <h3 class="intro-question">What problem are you exploring?</h3>
+        <p>
+          We are exploring the problem of <strong>forced human displacement</strong>, focusing on global refugee
+          and asylum trends. Millions of people are displaced each year due to conflict, persecution, and
+          climate-related crises, yet the scale, direction, and demographic impact of these movements are
+          difficult to understand through raw numbers alone. Our goal is to make these patterns visible and
+          interpretable through data visualization.
+        </p>
+
+        <h3 class="intro-question">Why is this interesting and worthwhile?</h3>
+        <p>
+          Understanding refugee movements is crucial for both humanitarian and policy considerations.
+          Visualizing this data helps reveal <strong>which regions are most affected, how displacement evolves over time,
+          and how host countries respond</strong>. By transforming statistical data into interactive visual insights,
+          we aim to foster awareness, empathy, and data-driven discussions about global migration and
+          humanitarian response.
+        </p>
+      </section>
+
+      <section id="intro-context" class="intro-section">
+        <h2 class="intro-heading">Understanding the Context</h2>
+        <div class="intro-divider"></div>
+
+        <p>
+          The refugee crisis is one of the most pressing global challenges of the 21st century. According to
+          UNHCR, over <strong>110 million people were forcibly displaced worldwide in 2023</strong> — the highest number
+          ever recorded. Behind these statistics are complex geopolitical, social, and environmental factors.
+        </p>
+
+        <p>
+          Our project situates this data within that broader context, helping readers understand not only
+          <strong>where displacement occurs</strong>, but <strong>why it happens</strong> and <strong>how it changes over time</strong>.
+        </p>
+
+        <h3 class="intro-question">Data Source</h3>
+        <p>
+          The data originates from the <strong>UNHCR Refugee Population Statistics Database</strong> and is publicly
+          available via Kaggle. It is collected and maintained by the United Nations High Commissioner for
+          Refugees through official government reports, administrative records, and UNHCR field offices.
+        </p>
+      </section>
+
+
+
+
+      <!-- Q1 -->
+      <section id="q1" class="question-section">
+        <h2 class="question-title">
+          Q1 – What is the current global landscape of forced migration and displacement?
+        </h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q1-viz-1"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q2 -->
+      <section id="q2" class="question-section">
+        <h2 class="question-title">Q2 – How has the global number of displaced individuals evolved over the last decade?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q2-viz-1"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q3 -->
+      <section id="q3" class="question-section">
+        <h2 class="question-title">Q3 – From which countries are people fleeing most, and why?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q3-viz-1"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q4 -->
+      <section id="q4" class="question-section">
+        <h2 class="question-title">Q4 – Where are most asylum seekers headed, and how has this changed over time?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q4-viz-1"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q5 -->
+      <section id="q5" class="question-section">
+        <h2 class="question-title">Q5 – Are there seasonal or monthly trends in asylum seeker movements?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q5-viz-1"></div>
+            <div id="q5-viz-2"></div>
+            <div id="q5-viz-3"></div>
+            <div id="q5-viz-4"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q6 -->
+      <section id="q6" class="question-section">
+        <h2 class="question-title">Q6 – Which countries shoulder the greatest responsibility in hosting refugees?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q6-viz-1"></div>
+            <div id="q6-viz-2"></div>
+            <div id="q6-viz-ctrl-1"></div>
+            <div id="q6-viz-3"></div>
+            <div id="q6-viz-ctrl-2"></div>
+            <div id="q6-viz-4"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q7 -->
+      <section id="q7" class="question-section">
+        <h2 class="question-title">Q7 – How do asylum-seeker burdens shift across countries in different time periods?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q7-viz-ctrl"></div>
+            <div id="q7-viz-1"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q8 -->
+      <section id="q8" class="question-section">
+        <h2 class="question-title">Q8 – How does displacement disproportionately affect demographic groups?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q8-viz-1"></div>
+            <div id="q8-viz-2"></div>
+            <div id="q8-viz-3"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+      <!-- Q9 -->
+      <section id="q9" class="question-section">
+        <h2 class="question-title">Q9 – What future trends can we anticipate in forced migration?</h2>
+        <div class="section-body">
+          <div class="viz-panel">
+            <div id="q9-viz-1"></div>
+            <div id="q9-viz-2"></div>
+          </div>
+          <div class="analysis-panel"><h3>Analysis & Comments</h3></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SCRIPT: OBSERVABLE RUNTIME ATTACHMENT -->
+  <script type="module">
+    import define from "./index.js";
+    import { Runtime, Inspector } from "./runtime.js";
+
+    const runtime = new Runtime();
+
+    runtime.module(define, name => {
+
+      // Q1
+      if (name === "q1_origin_choropleth")
+        return new Inspector(document.querySelector("#q1-viz-1"));
+
+      // Q2
+      if (name === "q2_stacked_area")
+        return new Inspector(document.querySelector("#q2-viz-1"));
+
+      // Q3
+      if (name === "q3_refugee_origins")
+        return new Inspector(document.querySelector("#q3-viz-1"));
+
+      // Q4
+      if (name === "q4_bump_chart")
+        return new Inspector(document.querySelector("#q4-viz-1"));
+
+      // Q5
+      if (name === "monthly_applications_chart")
+        return new Inspector(document.querySelector("#q5-viz-1"));
+      if (name === "chart_europe" || name === "viewof chart_europe")
+        return new Inspector(document.querySelector("#q5-viz-2"));
+      if (name === "chart_3yr")
+        return new Inspector(document.querySelector("#q5-viz-3"));
+      if (name === "chart_5yr")
+        return new Inspector(document.querySelector("#q5-viz-4"));
+
+      // Q6
+      if (name === "q6_refugee_host_chart")
+        return new Inspector(document.querySelector("#q6-viz-1"));
+
+      if (name === "q6_asylum_host_chart")
+        return new Inspector(document.querySelector("#q6-viz-2"));
+
+      if (name === "viewof q6_selectedRefugeePeriod")
+        return new Inspector(document.querySelector("#q6-viz-ctrl-1"));
+
+      if (name === "q6_refugee_host_map")
+        return new Inspector(document.querySelector("#q6-viz-3"));
+
+      if (name === "viewof q6_selectedAsylumPeriod")
+        return new Inspector(document.querySelector("#q6-viz-ctrl-2"));
+
+      if (name === "q6_asylum_window_map")
+        return new Inspector(document.querySelector("#q6-viz-4"));
+
+      // Q7
+      if (name === "viewof asylum_window_chart")
+        return new Inspector(document.querySelector("#q7-viz-ctrl"));
+      if (name === "asylum_bump_chart")
+        return new Inspector(document.querySelector("#q7-viz-1"));
+
+      // Q8
+      if (name === "q8_age_chart")
+        return new Inspector(document.querySelector("#q8-viz-1"));
+      if (name === "q8_gender_chart")
+        return new Inspector(document.querySelector("#q8-viz-2"));
+      if (name === "q8_age_trend_chart")
+        return new Inspector(document.querySelector("#q8-viz-3"));
+
+      // Q9
+      if (name === "q9_future_trends_chart")
+        return new Inspector(document.querySelector("#q9-viz-1"));
+      if (name === "q9_growth_chart")
+        return new Inspector(document.querySelector("#q9-viz-2"));
+
+      return null;
+    });
+  </script>
+</body>
+</html>
