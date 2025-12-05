@@ -342,7 +342,7 @@ function _q1_origin_choropleth(d3,time_series,world2)
     .selectAll("tspan")
     .data([
       "Total Displaced",
-      "(Origin, 2023)"
+      "(Origin)"
     ])
     .enter()
     .append("tspan")

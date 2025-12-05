@@ -1,3 +1,7 @@
+/* ---------------------------------------- */
+/* GLOBAL RESET + BASE TYPOGRAPHY           */
+/* ---------------------------------------- */
+
 * {
   box-sizing: border-box;
 }
@@ -14,15 +18,17 @@ body {
   min-height: 100vh;
 }
 
-/* Thin sidebar */
+/* ---------------------------------------- */
+/* SIDEBAR                                  */
+/* ---------------------------------------- */
+
 .sidebar {
-  width: 70px;               /* thin */
+  width: 70px;
   background: #111827;
   color: #e5e7eb;
   padding: 16px 8px;
   position: sticky;
   top: 0;
-  align-self: flex-start;
   height: 100vh;
 }
 
@@ -52,7 +58,7 @@ body {
   font-size: 13px;
   text-decoration: none;
   color: #e5e7eb;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.1s;
+  transition: background 0.15s ease, transform 0.1s;
 }
 
 .sidebar-nav a:hover {
@@ -60,13 +66,19 @@ body {
   transform: translateY(-1px);
 }
 
-/* Main content area */
+/* ---------------------------------------- */
+/* MAIN CONTENT AREA                        */
+/* ---------------------------------------- */
+
 .content {
   flex: 1;
   padding: 24px 32px 40px;
 }
 
-/* Question sections */
+/* ---------------------------------------- */
+/* QUESTION SECTIONS                        */
+/* ---------------------------------------- */
+
 .question-section {
   background: #ffffff;
   border-radius: 16px;
@@ -81,104 +93,66 @@ body {
   font-weight: 650;
 }
 
-/* 70 / 30 layout */
-.section-body {
+/* NEW TWO-COLUMN LAYOUT */
+.section-body.two-col-layout {
   display: flex;
-  gap: 18px;
+  flex-direction: row;
+  gap: 22px;
   align-items: flex-start;
 }
 
-/* Visualization container (supports multiple charts stacked vertically) */
+/* Visualization = 75% */
 .viz-panel {
-  flex: 0 0 70%;
-  max-width: 70%;
-  overflow-x: auto;
+  flex: 3;
   display: flex;
   flex-direction: column;
-  gap: 24px;       /* spacing between multiple charts */
+  gap: 16px;
 }
 
-/* Analysis panel */
+/* Analysis = 25% */
 .analysis-panel {
-  flex: 0 0 30%;
-  max-width: 30%;
-  border-left: 1px solid #e5e7eb;
-  padding-left: 14px;
-  font-size: 14px;
-  color: #4b5563;
+  flex: 1;
+  background: #ffffff;
+  border-left: 2px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  max-height: 100%;
+  overflow-y: auto;
 }
+
+/* ---------------------------------------- */
+/* ANALYSIS TYPOGRAPHY                      */
+/* ---------------------------------------- */
 
 .analysis-panel h3 {
   margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #6b3e26;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #6b7280;
 }
 
-/* Make embedded SVGs shrink nicely */
-.viz-panel svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.analysis-panel p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #4b5563;
+  margin-bottom: 10px;
 }
 
-/* Smooth scrolling for sidebar anchors */
-html {
-  scroll-behavior: smooth;
+.analysis-panel h4 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 650;
+  color: #b3542e;
 }
 
-/* Responsive Layout */
-@media (max-width: 900px) {
-  .page {
-    flex-direction: column;
-  }
+/* ---------------------------------------- */
+/* INTRO SECTIONS                           */
+/* ---------------------------------------- */
 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: static;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sidebar-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .content {
-    padding: 16px;
-  }
-
-  .section-body {
-    flex-direction: column;
-  }
-
-  .viz-panel,
-  .analysis-panel {
-    max-width: 100%;
-    flex-basis: 100%;
-    border-left: none;
-    padding-left: 0;
-  }
-
-  .analysis-panel {
-    border-top: 1px solid #e5e7eb;
-    padding-top: 10px;
-  }
-}
-
-
-
-
-
-
-
-/* Intro Sections */
 .intro-section {
   background: #ffffff;
   border-radius: 16px;
@@ -200,47 +174,47 @@ html {
   color: #4a2f21;
 }
 
-.intro-subtitle {
-  font-size: 18px;
-  font-weight: 500;
-  color: #b3542e;
-  margin-bottom: 28px;
+/* ---------------------------------------- */
+/* RESPONSIVENESS                           */
+/* ---------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  /* Stack viz + analysis vertically on tablets/mobiles */
+  .section-body.two-col-layout {
+    flex-direction: column;
+  }
+
+  .viz-panel,
+  .analysis-panel {
+    width: 100%;
+  }
 }
 
-.intro-team h4 {
-  font-size: 16px;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.intro-team p {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-.intro-heading {
-  font-size: 24px;
-  margin-bottom: 8px;
-  font-weight: 650;
-}
-
-.intro-divider {
-  width: 80px;
-  height: 3px;
-  background: #b3542e;
-  margin-bottom: 20px;
-}
-
-.intro-question {
-  font-size: 17px;
-  margin-top: 14px;
-  font-weight: 600;
-  color: #4a2f21;
-}
-
-.intro-section p {
-  font-size: 15px;
-  color: #4b5563;
-  line-height: 1.6;
+@media (max-width: 600px) {
+  .analysis-panel {
+    margin-top: 10px;
+  }
 }
